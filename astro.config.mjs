@@ -26,7 +26,7 @@ const adapterProvider = process.env.SERVER_ADAPTER || provider
 
 // https://astro.build/config
 export default defineConfig({
-  output: 'server',
+  output: 'static',
   adapter: providers[adapterProvider] || providers.node,
   integrations: [
     ...(process.env.SENTRY_DSN
