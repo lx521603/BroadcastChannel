@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
 import cloudflare from '@astrojs/cloudflare'
 import netlify from '@astrojs/netlify'
-import node from '@astrojs/node'
+// import node from '@astrojs/node'
 import { provider } from 'std-env'
 import sentry from '@sentry/astro'
 
