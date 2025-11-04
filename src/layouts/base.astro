@@ -113,7 +113,7 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
                       title="Tags"
                       class={`nav-link ${pathname === '/tags' ? 'current' : ''}`}
                     >
-                      Tags
+                       标签
                     </a>
                   </div>
                 ) : null
@@ -126,7 +126,7 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
                       title="Links"
                       class={`nav-link ${pathname === '/links' ? 'current' : ''}`}
                     >
-                      Links
+                       链接
                     </a>
                   </div>
                 ) : null
@@ -144,7 +144,7 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
             <input class="search-icon" name="icon" type="checkbox" placeholder="Search" />
             <form class="search-form" action={searchAction} method="get">
               {GOOGLE_SEARCH_SITE ? <input type="hidden" name="as_sitesearch" value={GOOGLE_SEARCH_SITE} /> : null}
-              <input type="text" name="q" placeholder="Search" />
+              <input type="text" name="q" placeholder="搜索" />
             </form>
             <div class="copyright-wrap">
               Powered by
@@ -165,7 +165,7 @@ const navs = (getEnv(import.meta.env, Astro, 'NAVS') || '')
       </div>
     </div>
     <a href="#wrapper" id="back-to-top" aria-label="Back to top">
-      <img {...backToTopIcon} alt="Back to Top" />
+      <img {...backToTopIcon} alt="返回顶部" />
     </a>
     <Fragment set:html={FOOTER_INJECT} />
   </body>
