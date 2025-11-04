@@ -3,7 +3,7 @@ import { defineConfig } from 'astro/config'
 import vercel from '@astrojs/vercel/serverless'
 import cloudflare from '@astrojs/cloudflare'
 import netlify from '@astrojs/netlify'
-// import node from '@astrojs/node'
+import node from '@astrojs/node'
 import { provider } from 'std-env'
 import sentry from '@sentry/astro'
 
@@ -27,7 +27,7 @@ const adapterProvider = process.env.SERVER_ADAPTER || provider
 // https://astro.build/config
 export default defineConfig({
   output: 'server',
-  adapter: providers[adapterProvider] || providers.node,
+  adapter: cloudflare(),//providers[adapterProvider] || providers.node,
   integrations: [
     ...(process.env.SENTRY_DSN
       ? [
