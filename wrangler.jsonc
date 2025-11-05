@@ -2,9 +2,11 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "broadcastchannel",
   "main": "./dist/_worker.js/index.js",
-  // 更新为今天的日期
   "compatibility_date": "2025-11-04",
-  "compatibility_flags": ["nodejs_compat"],
+  "compatibility_flags": [
+    "nodejs_compat",
+    "nodejs_compat_populate_process_env" // 👈 关键：添加这个标志
+  ],
   "assets": {
     "binding": "ASSETS",
     "directory": "./dist"
